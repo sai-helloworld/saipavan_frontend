@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
-import { UserPlus, ArrowLeft, Calendar, Mail, Phone, User } from 'lucide-react';
+import { UserPlus, Calendar, Mail, Phone, User } from 'lucide-react';
 
 interface FormData {
   fullName: string;
@@ -120,13 +120,7 @@ export default function Signup() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <Link
-          to="/"
-          className="absolute top-4 left-4 text-gray-600 hover:text-gray-900 flex items-center gap-2"
-        >
-          <ArrowLeft className="h-5 w-5" />
-          Back to Home
-        </Link>
+       
         
         <div className="flex justify-center">
           <div className="rounded-full bg-blue-100 p-3">

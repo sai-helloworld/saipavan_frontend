@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import {
   User, CreditCard, MapPin, Heart, Users, LogOut,
-  Phone, Mail, MessageSquare, Plus, X, Check
-} from 'lucide-react';
+  Phone, Plus, X} from 'lucide-react';
 import toast from 'react-hot-toast';
 
 const HEALTH_CONDITIONS = [

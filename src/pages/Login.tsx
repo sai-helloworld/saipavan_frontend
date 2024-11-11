@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserCheck, Calendar, Phone, ArrowLeft } from 'lucide-react';
-import Input from './shared/Input';
-import Button from './shared/Button';
+import Input from '../components/shared/Input';
+import Button from '../components/shared/Button';
 import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';
 import {
@@ -12,7 +12,7 @@ import {
   validateOTP,
 } from '../utils/validation';
 
-const Validation: React.FC = () => {
+const Login: React.FC = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
   const [formData, setFormData] = useState({
@@ -32,7 +32,7 @@ const Validation: React.FC = () => {
   const [timer, setTimer] = useState(0);
 
   useEffect(() => {
-    let interval: number;
+    let interval: any;
     if (timer > 0) {
       interval = setInterval(() => {
         setTimer((prev) => prev - 1);
@@ -183,4 +183,4 @@ const Validation: React.FC = () => {
   );
 };
 
-export default Validation;
+export default Login;
