@@ -4,7 +4,8 @@ import {
   Menu, X, ChevronLeft, ChevronRight, 
   Heart, Shield, Clock, Phone, Mail, MapPin,
   Facebook, Twitter, Linkedin, Instagram} from 'lucide-react';
-
+import securestorage from '../assets/pic1.jpg';
+import logo from "../assets/logo.jpg"; 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -21,9 +22,9 @@ export default function Home() {
       description: "Get customized healthcare plans designed specifically for you"
     },
     {
-      image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=80&w=2091",
-      title: "24/7 Support",
-      description: "Round-the-clock access to healthcare professionals"
+      image: securestorage,
+      title: "Secure Data Storage",
+      description: "Safeguard your personal health data with top-level encryption and privacy standards"
     }
   ];
 
@@ -88,10 +89,10 @@ export default function Home() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <Link to="/" className="flex items-center">
-                <Heart className="h-8 w-8 text-blue-600" />
-                <span className="ml-2 text-xl font-bold text-gray-900">Evernorth</span>
-              </Link>
+            <Link to="/" className="flex items-center">
+              <img src={logo} alt="Evernorth Logo" className="h-8 w-8" />
+              <span className="ml-2 text-xl font-bold text-gray-900">Evernorth</span>
+            </Link>
               <div className="hidden md:flex ml-10 space-x-8">
                 <Link to="/about" className="text-gray-600 hover:text-gray-900">About Us</Link>
                 <Link to="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
@@ -199,8 +200,10 @@ export default function Home() {
             <h2 className="text-3xl font-semibold mb-8">Why Choose Evernorth?</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="p-6 bg-white shadow-lg rounded-lg">
-                  {benefit.icon}
+                <div key={index} className="p-6 bg-white shadow-lg rounded-lg flex flex-col items-center">
+                  <div className="flex items-center justify-center mb-4">
+                    {benefit.icon}
+                  </div>
                   <h3 className="text-xl font-semibold mt-4">{benefit.title}</h3>
                   <p className="mt-2 text-gray-600">{benefit.description}</p>
                 </div>
@@ -208,6 +211,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
 
         {/* FAQ Section */}
          {/* FAQ Section */}
